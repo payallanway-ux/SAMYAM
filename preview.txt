@@ -1,0 +1,17 @@
+
+> preview
+> vite preview
+
+(node:92983) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Default inspector port 9229 not available, using 9233 instead
+
+Port 4173 is in use, trying another one...
+Port 4174 is in use, trying another one...
+Port 4175 is in use, trying another one...
+Port 4176 is in use, trying another one...
+  ➜  Local:   http://localhost:4177/
+  ➜  Network: use --host to expose
+  ➜  Debug:   http://localhost:4177/__debug
+HEAD / 200 OK (51ms)
+  ➜  Tunnel closed

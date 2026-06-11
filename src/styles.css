@@ -1,0 +1,345 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Override tilted/slanted hyphens and dashes in display fonts with clean horizontal ones */
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    local("Inter"), local("system-ui"), local("-apple-system"), local("Segoe UI"), local("Roboto"),
+    sans-serif;
+  unicode-range: U+002D, U+2010, U+2011, U+2012, U+2013, U+2014, U+2015, U+2212;
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    local("Inter"), local("system-ui"), local("-apple-system"), local("Segoe UI"), local("Roboto"),
+    sans-serif;
+  unicode-range: U+002D, U+2010, U+2011, U+2012, U+2013, U+2014, U+2015, U+2212;
+  font-weight: 100 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    local("Inter"), local("system-ui"), local("-apple-system"), local("Segoe UI"), local("Roboto"),
+    sans-serif;
+  unicode-range: U+002D, U+2010, U+2011, U+2012, U+2013, U+2014, U+2015, U+2212;
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    local("Inter"), local("system-ui"), local("-apple-system"), local("Segoe UI"), local("Roboto"),
+    sans-serif;
+  unicode-range: U+002D, U+2010, U+2011, U+2012, U+2013, U+2014, U+2015, U+2212;
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@theme inline {
+  --font-display: "Cormorant Garamond", "Playfair Display", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-saffron: var(--saffron);
+  --color-gold: var(--gold);
+  --color-deep-purple: var(--deep-purple);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #3d0068;
+  --card: #ffffff;
+  --card-foreground: #3d0068;
+  --primary: #823883;
+  --primary-foreground: #ffffff;
+  --accent: #ff7722;
+  --accent-foreground: #ffffff;
+  --muted: #efd9f7;
+  --muted-foreground: #823883;
+  --border: #efd9f7;
+  --saffron: #ff7722;
+  --gold: #d7ac28;
+  --deep-purple: #3d0068;
+
+  --gradient-hero: linear-gradient(135deg, #3d0068 0%, #823883 40%, #ff7722 100%);
+  --gradient-nav: linear-gradient(
+    90deg,
+    rgba(61, 0, 104, 0.95),
+    rgba(130, 56, 131, 0.9),
+    rgba(255, 119, 34, 0.9)
+  );
+  --gradient-cta: linear-gradient(to right, #ff7722, #823883);
+  --gradient-soft: radial-gradient(
+    ellipse at top,
+    rgba(239, 217, 247, 0.8),
+    rgba(255, 255, 255, 0.3) 60%,
+    transparent
+  );
+  --shadow-glow: 0 20px 60px -20px rgba(61, 0, 104, 0.4);
+  --shadow-soft: 0 10px 40px -10px rgba(61, 0, 104, 0.15);
+  --radius: 1rem;
+
+  /* Navbar Themes */
+  --nav-bg: rgba(61, 0, 104, 0.95);
+  --nav-text: #ffffff;
+  --nav-button-bg: rgba(255, 255, 255, 0.1);
+  --nav-button-text: #ffffff;
+}
+
+[data-nav-theme="light"] {
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #823883;
+  --nav-button-bg: rgba(130, 56, 131, 0.05);
+  --nav-button-text: #823883;
+}
+
+[data-nav-theme="dark"] {
+  --nav-bg: rgba(61, 0, 104, 0.98);
+  --nav-text: #ffffff;
+  --nav-button-bg: rgba(255, 255, 255, 0.1);
+  --nav-button-text: #ffffff;
+}
+
+[data-nav-theme="accent"] {
+  --nav-bg: rgba(130, 56, 131, 0.95);
+  --nav-text: white;
+  --nav-button-bg: rgba(255, 255, 255, 0.15);
+  --nav-button-text: white;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-gradient-hero {
+    background: linear-gradient(135deg, #823883, #ff7722);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-nav {
+    background: var(--gradient-nav);
+  }
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+  .bg-gradient-soft {
+    background: var(--gradient-soft);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .ease-out-expo {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes float-down {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(20px);
+    opacity: 0;
+  }
+}
+.flower-petal {
+  position: absolute;
+  pointer-events: none;
+  animation: float-down linear infinite;
+  will-change: transform;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+/* Teerthas page animations */
+@keyframes ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+.animate-ken-burns {
+  animation: ken-burns 20s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-gentle-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(92, 36, 94, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(92, 36, 94, 0.5),
+      inset 0 0 30px rgba(255, 255, 255, 0.08);
+  }
+}
+.animate-glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-fade-in > * {
+  opacity: 0;
+  animation: slide-in-up 0.6s ease-out forwards;
+}
+.stagger-fade-in > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-fade-in > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-fade-in > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-fade-in > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-fade-in > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-fade-in > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.stagger-fade-in > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.stagger-fade-in > *:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.stagger-fade-in > *:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes hero-text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+.animate-hero-reveal {
+  animation: hero-text-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-hero-reveal-delay {
+  animation: hero-text-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
