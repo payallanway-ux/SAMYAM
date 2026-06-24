@@ -367,7 +367,7 @@ function Index() {
               <ScrollReveal variant="fade-right" delay={150}>
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-soft border border-black/[0.06] aspect-[4/3] w-full">
                   <img
-                    src="https://www.jaypeehotels.com/blog/wp-content/uploads/2026/02/Jain-Temples-Tirths-in-India-1-scaled.jpg"
+                    src="https://samyam-frontend.pages.dev/assets/spiritual_joy_new-BQacSRm6.jpg"
                     alt="Devotion and spiritual celebration with Samyam seekers"
                     decoding="async"
                     className="w-full h-full object-cover"
