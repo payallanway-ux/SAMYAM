@@ -125,7 +125,7 @@ function ExploreYatrasPage() {
 
   const [yatras, setYatras] = useState<any[]>([]);
   const [selectedYatra, setSelectedYatra] = useState<string>(initialSlug);
-  const [activeSubTab, setActiveSubTab] = useState<"overview" | "itinerary" | "prep">("overview");
+  const [activeSubTab, setActiveSubTab] = useState<"overview" | "itinerary" | "prep">("itinerary");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
