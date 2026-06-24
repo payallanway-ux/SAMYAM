@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown, GraduationCap, Briefcase } from "lucide-react";
 
 const links = [
   { label: "Home", to: "/" },
-  { label: "Yatra & retreats", to: "/yatras" },
+  { label: "Yatra & Retreats", to: "/yatras" },
   { label: "Teerthas", to: "/teerthas" },
   {
     label: "Institutions",

@@ -272,7 +272,7 @@ function Index() {
         {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <HeroVideo />
-          <div className="absolute inset-0 bg-black/40 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/40 bg-linear-to-b from-black/40 via-transparent to-transparent" />
         </div>
         <FlowerField count={22} />
         <div className="relative z-10 max-w-5xl text-center">
@@ -367,7 +367,7 @@ function Index() {
               <ScrollReveal variant="fade-right" delay={150}>
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-soft border border-black/[0.06] aspect-[4/3] w-full">
                   <img
-                    src="https://samyam.co/images/why%20choose%20samyam.jpg"
+                    src="https://www.jaypeehotels.com/blog/wp-content/uploads/2026/02/Jain-Temples-Tirths-in-India-1-scaled.jpg"
                     alt="Devotion and spiritual celebration with Samyam seekers"
                     decoding="async"
                     className="w-full h-full object-cover"
@@ -876,7 +876,7 @@ function Index() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                     <h4 className="text-white font-display text-xl md:text-2xl font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       {item.title}
                     </h4>

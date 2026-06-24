@@ -488,7 +488,7 @@ function ExploreYatrasPage() {
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10 [&>*]:!h-auto [&>*]:!self-start">
                         {activeYatra.itinerary.map((dayItem: any, idx: number) => {
                           const firstPoint = dayItem.points[0] || "";
                           const isCulmination =
@@ -497,17 +497,21 @@ function ExploreYatrasPage() {
                               firstPoint.toLowerCase().includes("special puja") ||
                               firstPoint.toLowerCase().includes("havan for") ||
                               firstPoint.toLowerCase().includes("culmination"));
-
                           const displayPoints = isCulmination
                             ? dayItem.points.slice(1)
                             : dayItem.points;
 
                           return (
-                            <ScrollReveal key={idx} variant="fade-up" delay={idx * 100}>
-                              <div className="p-6 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] hover:border-amber-400/30 transition-all duration-300 flex flex-col h-full">
+                            <ScrollReveal
+                              key={idx}
+                              variant="fade-up"
+                              delay={idx * 100}
+                              className="h-auto! self-start"
+                            >
+                              <div className="p-6 rounded-2xl bg-white/4 border border-white/10 hover:bg-white/8 hover:border-amber-400/30 transition-all duration-300 flex flex-col">
                                 {isCulmination ? (
                                   <div className="mb-4 space-y-2">
-                                    <div className="inline-flex w-8 h-8 rounded-full bg-[#ff5a00] flex items-center justify-center text-sm font-bold text-white shadow-sm">
+                                    <div className="inline-flex w-8 h-8 rounded-full bg-[#ff5a00] items-center justify-center text-sm font-bold text-white shadow-sm">
                                       {dayItem.day}
                                     </div>
                                     <h5 className="text-sm font-semibold text-white leading-snug font-display">
@@ -516,13 +520,12 @@ function ExploreYatrasPage() {
                                   </div>
                                 ) : (
                                   <div className="mb-4">
-                                    <div className="inline-flex w-8 h-8 rounded-full bg-[#ff5a00] flex items-center justify-center text-sm font-bold text-white shadow-sm">
+                                    <div className="inline-flex w-8 h-8 rounded-full bg-[#ff5a00] items-center justify-center text-sm font-bold text-white shadow-sm">
                                       {dayItem.day}
                                     </div>
                                   </div>
                                 )}
-
-                                <ul className="space-y-3 text-xs text-white/80 list-none font-body mt-auto">
+                                <ul className="space-y-3 text-xs text-white/80 list-none font-body">
                                   {displayPoints.map((pointText: string, pIdx: number) => (
                                     <li
                                       key={pIdx}
@@ -543,30 +546,6 @@ function ExploreYatrasPage() {
                     </div>
                   </div>
                 )}
-
-                {/* Stays Section */}
-                <ScrollReveal variant="fade-up">
-                  <div className="p-8 md:p-10 rounded-3xl bg-white border border-black/[0.06] shadow-soft hover:border-amber-600/30 transition-all duration-300">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                      <div className="md:col-span-8 space-y-3 text-left">
-                        <span className="px-3.5 py-1 rounded-full bg-amber-500/10 text-amber-600 border border-amber-500/20 text-[10px] font-bold uppercase tracking-wider inline-block">
-                          Accommodations
-                        </span>
-                        <h3 className="text-2xl font-display font-semibold text-foreground">
-                          {activeYatra.staysHeading}
-                        </h3>
-                        <p className="text-xs md:text-sm text-muted-foreground leading-relaxed font-body">
-                          {activeYatra.staysDesc}
-                        </p>
-                      </div>
-                      <div className="md:col-span-4 flex justify-center">
-                        <div className="w-20 h-20 rounded-3xl bg-muted border border-border flex items-center justify-center text-4xl shadow-soft">
-                          🏨
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
 
                 {/* Sacred Darshans Circuit */}
                 <div className="border-t border-border pt-12">
@@ -612,7 +591,6 @@ function ExploreYatrasPage() {
 
             {activeSubTab === "prep" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
-                {/* Spiritual Preparation Card */}
                 <ScrollReveal variant="fade-right" className="h-full">
                   <div className="p-8 rounded-3xl bg-white border border-black/[0.06] shadow-soft hover:border-amber-600/30 transition duration-300 space-y-6 h-full">
                     <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-2xl text-amber-600 border border-amber-500/20">

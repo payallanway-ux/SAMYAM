@@ -1,18 +1,8 @@
 [
   {
-    "img": "https://samyam.co/images/why%20choose%20samyam.jpg",
+    "img": "https://www.jaypeehotels.com/blog/wp-content/uploads/2026/02/Jain-Temples-Tirths-in-India-1-scaled.jpg",
     "title": "Sacred Aarti",
     "span": "row-span-2 col-span-2"
-  },
-  {
-    "img": "kashiImg",
-    "title": "Kashi Ghats",
-    "span": "row-span-1 col-span-1"
-  },
-  {
-    "img": "vrindavanImg",
-    "title": "Vrindavan Devotion",
-    "span": "row-span-1 col-span-1"
   },
   {
     "img": "spiritualJoy",
@@ -20,18 +10,8 @@
     "span": "row-span-1 col-span-2"
   },
   {
-    "img": "himachalImg",
-    "title": "Himachal Serenity",
-    "span": "row-span-2 col-span-1"
-  },
-  {
     "img": "yatra1Img",
     "title": "Divine Passage",
-    "span": "row-span-1 col-span-1"
-  },
-  {
-    "img": "studentsImg",
-    "title": "Young Seekers",
     "span": "row-span-1 col-span-1"
   }
 ]
