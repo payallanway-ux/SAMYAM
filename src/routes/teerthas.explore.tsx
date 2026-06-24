@@ -124,7 +124,7 @@ function ExploreTeerthasPage() {
 
   const [teertha, setTeertha] = useState<any>(null);
   const [selectedTeertha, setSelectedTeertha] = useState(initialSlug);
-  const [activeSubTab, setActiveSubTab] = useState<"overview" | "itinerary" | "prep">("overview");
+  const [activeSubTab, setActiveSubTab] = useState<"overview" | "itinerary" | "prep">("itinerary");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -451,7 +451,7 @@ function ExploreTeerthasPage() {
 
                           return (
                             <ScrollReveal key={idx} variant="fade-up" delay={idx * 100}>
-                              <div className="p-6 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] hover:border-amber-400/30 transition-all duration-300 flex flex-col h-full">
+                              <div className="p-6 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] hover:border-amber-400/30 transition-all duration-300 flex flex-col">
                                 {isCulmination ? (
                                   <div className="mb-4 space-y-2">
                                     <div className="inline-flex w-8 h-8 rounded-full bg-[#ff5a00] flex items-center justify-center text-sm font-bold text-white shadow-sm">
@@ -490,30 +490,6 @@ function ExploreTeerthasPage() {
                     </div>
                   </div>
                 )}
-
-                {/* Stays Section */}
-                <ScrollReveal variant="fade-up">
-                  <div className="p-8 md:p-10 rounded-3xl bg-white border border-black/[0.06] shadow-soft hover:border-amber-600/30 transition-all duration-300">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                      <div className="md:col-span-8 space-y-3 text-left">
-                        <span className="px-3.5 py-1 rounded-full bg-amber-500/10 text-amber-600 border border-amber-500/20 text-[10px] font-bold uppercase tracking-wider inline-block">
-                          Accommodations
-                        </span>
-                        <h3 className="text-2xl font-display font-semibold text-foreground">
-                          {activeTeertha.staysHeading}
-                        </h3>
-                        <p className="text-xs md:text-sm text-muted-foreground leading-relaxed font-body">
-                          {activeTeertha.staysDesc}
-                        </p>
-                      </div>
-                      <div className="md:col-span-4 flex justify-center">
-                        <div className="w-20 h-20 rounded-3xl bg-muted border border-border flex items-center justify-center text-4xl shadow-soft">
-                          🏨
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
 
                 {/* Sacred Darshans Circuit */}
                 <div className="border-t border-border pt-12">
