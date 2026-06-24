@@ -367,7 +367,7 @@ function Index() {
               <ScrollReveal variant="fade-right" delay={150}>
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-soft border border-black/[0.06] aspect-[4/3] w-full">
                   <img
-                    src="https://drive.google.com/file/d/1j1kw7rqOlfOqjAC9kju2p5F5NZidFP47/view"
+                    src="https://res.cloudinary.com/dsbkp52si/image/upload/v1782284390/PIY_8740_2_dwa2h5.jpg"
                     alt="Devotion and spiritual celebration with Samyam seekers"
                     decoding="async"
                     className="w-full h-full object-cover"
