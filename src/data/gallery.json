@@ -13,5 +13,15 @@
     "img": "yatra1Img",
     "title": "Divine Passage",
     "span": "row-span-1 col-span-1"
+  },
+  {
+    "img": "https://res.cloudinary.com/dsbkp52si/image/upload/v1782383875/PRA_5730_zquhui.jpg",
+    "title": "Divine Offering",
+    "span": "row-span-1 col-span-1"
+  },
+  {
+    "img": "https://res.cloudinary.com/dsbkp52si/image/upload/v1782383195/PIY_0156_1_fjpoyk.jpg",
+    "title": "Healing Presence",
+    "span": "row-span-1 col-span-1"
   }
 ]
